@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bank Inside</title>
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,17 +19,74 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .font-ubuntu{
-            font-family: 'Ubuntu', sans-serif;
-        }
+      .font-ubuntu {
+        font-family: "Ubuntu", sans-serif;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body class="w-11/12 mx-auto mt-20">
     <header>
-        <h1 class="text-5xl text-center">Let's Get  <span class="text-violet-500 font-medium">Some Money.</span>!!! </h1>
+      <h1 class="text-5xl text-center">
+        Let's Get
+        <span class="text-violet-500 font-medium">Some Money.</span>!!!
+      </h1>
     </header>
     <main>
-
+      <section class="mt-12">
+        <div class="grid lg:grid-cols-3 gap-4 w-9/12 mx-auto text-white">
+          <div class="bg-pink-400 p-8 rounded-xl w-3/5 lg:w-full mx-auto">
+            <h3 class="text-2xl">Deposit</h3>
+            <h2 class="text-5xl" id="text-deposit">$00</h2>
+          </div>
+          <div class="bg-green-400 p-8 rounded-xl w-3/5 lg:w-full mx-auto">
+            <h3 class="text-2xl">Withdraw</h3>
+            <h2 class="text-5xl" id="text-withdraw">$00</h2>
+          </div>
+          <div class="bg-fuchsia-500 p-8 rounded-xl w-3/5 lg:w-full mx-auto">
+            <h3 class="text-2xl">Balance</h3>
+            <h2 class="text-5xl" id="text-balance">$1240</h2>
+          </div>
+        </div>
+      </section>
+      <!-- Deposit and withdraw -->
+      <section class="mt-12">
+        <div class="grid lg:grid-cols-2 gap-4 w-9/12 mx-auto">
+          <div class="bg-indigo-400 p-8 rounded-xl">
+            <h3 class="text-2xl text-white">Please Deposit</h3>
+            <input
+              class="mb-3 p-4 block mt-4 rounded-md outline-none w-2/3"
+              type="text"
+              name=""
+              id="input-deposit"
+              placeholder="$ Amount you want to deposit."
+            />
+            <button
+              class="bg-rose-400 font-medium py-3 px-6 text-center rounded-lg text-white hover:bg-sky-400 text-2xl capitalize"
+              id="btn-deposit"
+            >
+              Deposit
+            </button>
+          </div>
+          <div class="bg-sky-400 p-8 rounded-xl">
+            <h3 class="text-2xl text-white">Please Withdraw</h3>
+            <input
+              class="mb-3 p-4 block mt-4 rounded-md outline-none w-2/3"
+              type="text"
+              name=""
+              id="input-withdraw"
+              placeholder="$ Amount you want to Withdraw."
+            />
+            <button
+              class="bg-purple-600 font-medium py-3 px-6 text-center rounded-lg text-white hover:bg-blue-800 text-2xl capitalize"
+              id="btn-withdraw"
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+
+    <script src="./js/deposit.js"></script>
+  </body>
 </html>
